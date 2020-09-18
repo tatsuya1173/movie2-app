@@ -1,0 +1,93 @@
+.wrapper {
+  width: 100%;
+  height: 900px;
+  padding-top: 50px;
+  background-color: white;
+}
+.wrapper__movies {
+  margin: 0 auto;
+}
+.wrapper__movies__box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+.wrapper__movies__box__name {
+  display: flex;
+}
+.wrapper__movies__box__name__ti {
+  font-weight: bold;
+}
+.wrapper__movies__box__nick {
+  display: flex;
+}
+.wrapper__movies__box__nick__ti {
+  font-weight: bold;
+}
+
+.item-link{
+  text-decoration: none;
+  color:black;
+}
+// ここ追加しました20200828
+.slide{
+  background: rgba(45,45,45, 0.7);
+  display:none;
+  position: absolute;
+  z-index: 1;
+  font-size: 15px;
+  width:70px;
+  height:300px;
+  color:white;
+  line-height: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  text-align: center;
+}
+.c_cook{
+  display:none;
+  position: absolute;
+  left:70px;
+  top:85px;
+  width:200px;
+  background: rgba(45,45,45, 0.7);
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+.c_movie{
+  display:none;
+  position: absolute;
+  left:70px;
+  top:140px;
+  width:260px;
+  background: rgba(45,45,45, 0.7);
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+.c_gym{
+  display:none;
+  position: absolute;
+  left:70px;
+  top:195px;
+  width:260px;
+  background: rgba(45,45,45, 0.7);
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+.c_music{
+  display:none;
+  position: absolute;
+  left:70px;
+  top:250px;
+  width:250px;
+  background: rgba(45,45,45, 0.7);
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}

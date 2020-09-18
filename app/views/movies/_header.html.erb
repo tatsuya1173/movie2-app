@@ -1,0 +1,52 @@
+<div class="header">
+  <div class="header__top">
+    <%= image_tag "zatu.png", class: "top-img", size: "300x200"; %>
+    <div class="header__top__regi">
+      <% if user_signed_in? %>
+        <div class="item">
+          <%= current_user.nickname %>
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'log_btn' %>
+        </div>
+        <% if @path.is('movies#index') %>
+        <div class="postMovie">
+          <%= link_to new_movie_path, class: 'log_btn' do %>
+            <div class="postMovie__text">
+              post
+            </div>
+            <div class="postMovie__icon">
+              <%= icon('fas', 'film', class: "icon") %>
+            </div>
+          <% end %>
+        </div>
+        <% end %>
+      <% else %>
+        <div class="item">
+          <%= link_to "ログイン", new_user_session_path, class: 'log_btn' %>
+        </div>
+        <div class="item">
+          <%= link_to "新規登録", new_user_registration_path, class: 'log_btn' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <% if @path.is('movies#index') %>
+  <div class="cat">
+    <%= link_to "カテゴリー", "#", class: "cat__btn" %>
+    <div class="slide" style="display:none;">
+      <p class="s_all">All</p>
+      <div class="s_cook">料理
+      
+      </div>
+      <div class="s_movie">映画
+       
+      </div>
+      <div class="s_gym">ジム
+       
+      </div>
+      <div class="s_music">音楽
+       
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>

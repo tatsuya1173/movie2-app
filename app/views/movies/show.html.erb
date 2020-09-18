@@ -1,0 +1,48 @@
+<%= render "header" %>
+<div class="movie-show">
+  <h3>チャットルーム</h3>
+  <%= render "devise/shared/error_messages", resource: @movie %>
+  <div class="movie-show__title">
+    <h4>タイトル：  <%= @movie.title %></h4>
+  </div>
+  <div class="movie-show__image">
+    <%= image_tag @movie.image.to_s, size: "300x200" %>
+  </div>
+  <div class="movie-show__body">
+    <p>映画の説明：<%= @movie.body %><br/></p>
+    <p>投稿者：<%= @user.nickname %></p>
+  </div>
+  <div class="comments">
+    <% if @comments %>
+      <% @comments.each do |comment| %>
+        <div class="comments__box">
+          <div class="comments__box__body">
+            <%= comment.comment %>
+          </div>
+          <div class="comments__box__time">
+            <%= comment.created_at.strftime("%Y年%m月%d日 %H時%M分") %>
+          </div>
+          <div class="comments__box__user">
+            <%= comment.user.nickname %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="comment">
+    <% if current_user %>
+      <%= form_with(model: [@movie, @comment], local: true) do |form| %>
+        <%= form.text_area :comment, placeholder: "Comment", class: "comment__area" %>
+        <%= form.submit "Submit", class: "comment__btn" %>
+      <% end %>
+    <% else %>
+      <p>Need login</p>
+    <% end %>
+  </div>
+</div>
+<a class="btn" href="/">投稿一覧へ戻る</a>
+   <% if user_signed_in? && current_user.id == @movie.user_id %>
+    <%= link_to '映画の編集', edit_movie_path, method: :get, class: "item-red-btn" %>
+    <p class='or-text'>or</p>
+    <%= link_to '削除', movie_path, method: :delete, class:'item-destroy' %>
+    <% end %>
