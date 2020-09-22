@@ -60,3 +60,4 @@ gem 'pry-rails'
 gem 'ancestry'
 gem 'jquery-rails'
 gem 'rails_12factor'
+gem "aws-sdk-s3", require: false
