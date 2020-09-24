@@ -26,7 +26,8 @@ https://movie2-app.herokuapp.com/
 # Usage
 ログインした後、興味のある映画の情報を投稿できる。他のユーザーが投稿した映画についてコメントをすることができる。他のユーザーが投稿した映画が一覧表示で見れる。
 
-# Note
+# ER 
+ https://gyazo.com/80f4b2791d60da61ddf351a884a70c41
  
 # Author
  
