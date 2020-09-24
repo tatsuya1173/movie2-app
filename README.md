@@ -13,6 +13,11 @@ movie_app
 # URL
 
 https://movie2-app.herokuapp.com/
+
+# Test account
+
+## masa   sandoumasahito@gmail.com      g1356135
+## sanji  12345678@gmail.com            G1356135
   
 # Features
 投稿者はカテゴリーを選択し、雑談したいお題を投稿することでユーザー同士がその題材についてコメントし合えるアプリです。
@@ -25,6 +30,9 @@ https://movie2-app.herokuapp.com/
 
 # Usage
 ログインした後、興味のある映画の情報を投稿できる。他のユーザーが投稿した映画についてコメントをすることができる。他のユーザーが投稿した映画が一覧表示で見れる。
+
+# Features to be implemented
+AWS画像アップロード機能
 
 # ER 
  https://gyazo.com/80f4b2791d60da61ddf351a884a70c41
