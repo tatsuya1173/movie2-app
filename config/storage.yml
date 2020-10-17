@@ -40,4 +40,3 @@ local:
 #   service: Mirror
 #   primary: local
 #   mirrors: [ amazon, google, microsoft ]
-
